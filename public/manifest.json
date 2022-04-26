@@ -1,15 +1,22 @@
 {
-  "short_name": "WalletConnect Example",
-  "name": "WalletConnect Example",
-  "icons": [
+  "name": "xtine vs walletconnect",
+  "description": "beautiful prototype",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Open the popup"
+  },
+  "icons": {
+    "16": "ck.png",
+    "48": "ck.png",
+    "128": "ck.png"
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["./static/js/content.js"]
     }
-  ],
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  ]
 }

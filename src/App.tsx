@@ -81,7 +81,6 @@ const SModalParagraph = styled.p`
   margin-top: 30px;
 `;
 
-// @ts-ignore
 const SBalances = styled(SLanding as any)`
   height: 100%;
   & h3 {
@@ -178,6 +177,7 @@ class App extends React.Component<any, any> {
     // subscribe to events
     await this.subscribeToEvents();
   };
+
   public subscribeToEvents = () => {
     const { connector } = this.state;
 
